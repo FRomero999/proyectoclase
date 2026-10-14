@@ -17,6 +17,8 @@ Consiste en un sitio web para un centro formativo de FP.
 - Todo en una una única página index, divido por secciones.
 
 ## Contenido de la web
+- El nombre del centro es CESUR
+- el centro esta especulizado en informatica
 - El contenido debe ser realista.
 - El contenido debe estar en ingles.
 - Las imagenes por defecto son de picsum.photos

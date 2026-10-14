@@ -6,9 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: '2DAW' });
 });
 
-/* GET Contact page. */
-router.get('/contacto', function(req, res, next) {
-  res.render('contact', {});
-});
-
 module.exports = router;
