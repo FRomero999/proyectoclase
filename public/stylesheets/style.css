@@ -8,7 +8,7 @@ html,body{
 /* CSS Hero */
 
 section.hero{
-  width:100vw;
+  min-width:100%;
   min-height:100vh;
   display: flex;
   justify-content: center;
@@ -27,6 +27,8 @@ section.hero{
   background-size: cover;
   background-repeat: no-repeat;
 
+  box-sizing:border-box;
+
   h1{
     font-size:2rem;
     margin-bottom:0px;
@@ -44,3 +46,19 @@ section.hero{
 
 }
 
+
+/* CSS Footer */ 
+
+footer.footer{
+  min-width:100%;
+  background: rgba(6, 14, 28, 0.6);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem; 
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+
+}
