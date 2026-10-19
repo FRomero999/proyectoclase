@@ -1,0 +1,36 @@
+/* CSS Header */
+section.header{
+
+    background-color:var(--background-color-dark);
+    color:var(--background-color-accent);
+  
+    nav.header-navbar{
+  
+      ul{
+        display:flex;
+        flex-direction: row;
+        gap:1rem;
+        justify-content:center;
+        padding:0;
+        margin:0;
+        list-style-type: none;
+  
+        a {
+          color:var(--background-color-accent);
+          text-decoration:none;
+          display:block;
+          padding:1rem;
+          transition:0.3s;
+  
+          &:hover{
+            background-color: var(--background-color-light);
+          }
+    
+        }
+  
+  
+      }
+  
+    }
+  
+  }
