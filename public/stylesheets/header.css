@@ -5,7 +5,15 @@ section.header{
     color:var(--background-color-accent);
   
     nav.header-navbar{
-  
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img{ 
+        width:80px;
+        filter:invert();
+      }
+
       ul{
         display:flex;
         flex-direction: row;
@@ -23,7 +31,7 @@ section.header{
           transition:0.3s;
   
           &:hover{
-            background-color: var(--background-color-light);
+            border-bottom:solid 2px var(--background-color-accent);
           }
     
         }
