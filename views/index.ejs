@@ -8,17 +8,19 @@
 </head>
 <body>
 
-  <aside class="off-canvas">
+  <aside class="off-canvas hidden">
     <nav class="off-canvas-menu">
       <button class="off-canvas-close">&times;</button>
       <ul>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#admissions">Admissions</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#news">News & Events</a></li>
+        <li><a href="/program/dam">DAM<br><small>Multiplatform Application Development</small></a></li>
+        <li><a href="/program/daw">DAW<br><small>Web Application Developmen</small></a></li>
+        <li><a href="/program/asir">ASIR<br><small>IT Systems Administration</small></a></li>
+        <li><a href="/program/asrm">ASRM<br><small>Microcomputer Systems and Network</small></a></li>
       </ul>
     </nav>
+    <footer>
+      © CESUR 2024 — Inspiring the next generation of IT professionals.
+    </footer>
   </aside>
 
   <section class="header">
@@ -26,7 +28,7 @@
       <img src="/images/logo.png">
       <ul>
         <li><a href="#about-us">About Us</a></li>
-        <li><a href="#programs">Programs</a></li>
+        <li><a href="#programs" id="open_offcanvas">Programs</a></li>
         <li><a href="#admissions">Admissions</a></li>
       </ul>
       <ul>
@@ -83,5 +85,7 @@
     </div>
   </footer>
 
-</body>
+  <script src="/javascripts/app.js"></script>
+
+  </body>
 </html>
