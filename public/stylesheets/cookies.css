@@ -1,0 +1,53 @@
+div.cookies-panel{
+    position:fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color:var(--background-color-light);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    translate: 0 8rem;
+    opacity: 0;
+    height:8rem;
+ 
+ 
+    div.inner{
+       display:flex;
+       flex-direction: column;
+       gap:1rem;
+    }
+ 
+    div.inner:nth-child(2){
+       min-width:10rem;
+    }
+ 
+    div.cookie-info{
+       display:none;
+    }
+ 
+ }
+ 
+ div.cookies-panel.show{
+    translate: 0 0;
+    opacity: 1;
+    transition:all 1s;
+ }
+ 
+ div.cookies-panel.show-extended{
+    height:80vh;
+ 
+    div.inner > p{
+       display:none;  
+    }
+ 
+    div.cookie-info{
+       display:block;
+       /* overflow-y:scroll;*/
+       max-height: 80vh;
+    }
+ }

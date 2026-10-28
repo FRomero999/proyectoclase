@@ -20,6 +20,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+// Expose cookie-acceptance status to all templates
+app.use((req, res, next) => {
+  res.locals.cookiesAccepted = req.cookies.cookiesAccepted === 'true';
+  next();
+});
+
+// Route to accept cookies (sets a persistent cookie)
+app.post('/accept-cookies', (req, res) => {
+  res.cookie('cookiesAccepted', 'true', {
+    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+    httpOnly: false,
+    sameSite: 'lax'
+  });
+  res.json({ accepted: true });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
