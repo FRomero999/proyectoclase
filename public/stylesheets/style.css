@@ -78,5 +78,90 @@ section.courses{
   }
  }
  
+section.slideshow{
+  padding:2rem 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 
+  h2{
+    font-size:2rem;
+  }
+
+  div.slideshow-inner{
+    position:relative;
+    width:100%;
+    height:28rem;
+    overflow:hidden;
+    margin-top:2rem;
+    box-shadow:0 0 2px 2px gray;
+
+    div.slide{
+      position:absolute;
+      inset:0;
+      width:100%;
+      transform:translateX(100%);
+      z-index:1;
+      animation:slideshow-slide 12s infinite;
+
+      &:nth-child(1){
+        animation-delay:0s;
+      }
+
+      &:nth-child(2){
+        animation-delay:-8s;
+      }
+
+      &:nth-child(3){
+        animation-delay:-4s;
+      }
+
+      img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+      }
+
+      div.slide-caption{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        padding:1rem;
+        box-sizing:border-box;
+        text-align:center;
+        color:var(--text-color-light);
+        background:linear-gradient(
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0.7) 100%
+        );
+
+        h4{
+          margin:0 0 0.5rem;
+          font-size:1.5rem;
+        }
+
+        p{
+          margin:0;
+          font-size:1rem;
+        }
+      }
+    }
+
+    button.slide-prev,
+    button.slide-next,
+    div.slide-dots{
+      display:none;
+    }
+  }
+}
+
+@keyframes slideshow-slide{
+  0%     { transform:translateX(100%);  z-index:2; }
+  8.33%  { transform:translateX(0);     z-index:2; }
+  33.33% { transform:translateX(0);     z-index:2; }
+  41.67% { transform:translateX(-100%); z-index:1; }
+  100%   { transform:translateX(-100%); z-index:1; }
+}
 
