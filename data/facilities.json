@@ -1,0 +1,28 @@
+[
+  {
+    "image": "https://picsum.photos/id/1080/800/600",
+    "alt": "CESUR computer lab",
+    "reverse": false,
+    "heading": "Our Facilities",
+    "description": "CESUR offers modern, fully equipped facilities designed for hands-on training in informatics. Our computer labs feature the latest hardware and software, networking racks, server rooms and collaborative workspaces where students develop real-world skills from day one.",
+    "items": [
+      "Computer labs with up-to-date workstations",
+      "Networking and server infrastructure",
+      "Cybersecurity practice environment",
+      "Collaborative study and project areas"
+    ]
+  },
+  {
+    "image": "https://picsum.photos/id/1081/800/600",
+    "alt": "CESUR networking lab",
+    "reverse": true,
+    "heading": "Practical Training",
+    "description": "Students learn in real-world environments that simulate professional IT workplaces. From configuring enterprise networks to securing systems against cyber threats, every lab session builds the practical experience employers look for.",
+    "items": [
+      "Hands-on networking and server labs",
+      "Cybersecurity defense and attack simulations",
+      "Hardware assembly and maintenance workshops",
+      "Team-based project development rooms"
+    ]
+  }
+]
