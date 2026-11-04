@@ -8,6 +8,7 @@ aside.off-canvas{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 4;
  
  
     button.off-canvas-close{
