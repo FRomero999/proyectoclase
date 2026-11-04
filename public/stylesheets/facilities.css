@@ -1,0 +1,75 @@
+/* CSS facilities */
+
+section.facilities{
+  padding:4rem 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2rem;
+
+  div.facilities-inner{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    gap:3rem;
+    align-items:center;
+    justify-content:center;
+    max-width:1200px;
+    width:100%;
+    padding:0 2rem;
+    box-sizing:border-box;
+
+    div.facilities-row{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      gap:3rem;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+
+      &.facilities-row--reverse{
+        flex-direction:row-reverse;
+      }
+    }
+
+    div.facilities-image{
+      flex:1 1 400px;
+
+      img{
+        width:100%;
+        height:auto;
+        display:block;
+        border-radius:0.5rem;
+        box-shadow:0 0 2px 2px gray;
+      }
+    }
+
+    div.facilities-text{
+      flex:1 1 300px;
+
+      h2{
+        font-size:2.5rem;
+        margin:0 0 1rem 0;
+      }
+
+      p{
+        font-size:1rem;
+        line-height:1.6;
+        margin:0 0 1.5rem 0;
+      }
+
+      ul{
+        
+        margin:0;
+
+        li{
+          font-size:1rem;
+          margin-bottom:0.5rem;
+          padding-left:1.5rem;
+          position:relative;
+        }
+      }
+    }
+  }
+}
