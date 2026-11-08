@@ -6,8 +6,9 @@ var data = require("../data/data");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  let info = data.getCourses();
-  res.render('index', { courses : info });
+  let courses = data.getCourses();
+  let facilities = data.getFacilities();
+  res.render('index', { courses, facilities });
 });
 
 module.exports = router;
