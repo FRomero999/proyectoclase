@@ -18,6 +18,11 @@ document.querySelector("#open_offcanvas")?.addEventListener("click", (event) => 
     offcanvas_menu.classList.toggle("hidden")
 })
 
+document.querySelector("button.off-canvas-close")?.addEventListener("click", (event) => {
+    event.preventDefault()
+    offcanvas_menu.classList.add("hidden")
+})
+
 document.querySelector("#cookies-link")?.addEventListener("click", (event) => {    
     event.preventDefault()
     cookies_panel.classList.add("show")
