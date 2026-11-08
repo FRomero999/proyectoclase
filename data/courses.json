@@ -1,23 +1,27 @@
 [
   {
+    "id": "dam",
     "image": "https://picsum.photos/id/101/300",
     "alt": "Multiplatform Application Development",
     "description": "Train to build applications for mobile, desktop and web. Learn Java, Kotlin, Swift and cross-platform frameworks to create apps that run on any device.",
     "title": "Multiplatform Application Development"
   },
   {
+    "id": "daw",
     "image": "https://picsum.photos/id/102/300",
     "alt": "Web Application Development",
     "description": "Master frontend and backend web technologies. HTML5, CSS3, JavaScript, Node.js, Express and databases to build dynamic, responsive websites and web applications.",
     "title": "Web Application Development"
   },
   {
+    "id": "asir",
     "image": "https://picsum.photos/id/103/300",
     "alt": "IT Systems Administration",
     "description": "Learn to install, configure and maintain servers and networks. Linux, Windows Server, virtualization, cloud services and IT infrastructure management.",
     "title": "IT Systems Administration"
   },
   {
+    "id": "asrm",
     "image": "https://picsum.photos/id/104/300",
     "alt": "Microcomputer Systems and Networks",
     "description": "PC hardware assembly and repair, operating systems, local networks, cabling and technical support. Become a computer systems technician.",

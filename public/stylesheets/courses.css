@@ -66,6 +66,13 @@ section.courses{
   }
 }
 
+/* Hero de la ficha de curso */
+section.hero.course-hero{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
 /* Vibración breve con rotaciones decrecientes.
    Empieza y termina en 0deg, que es el valor original de la imagen. */
 @keyframes card-wiggle{

@@ -15,6 +15,15 @@ function getCourses() {
 }
 
 /**
+ * Returns a single course by its id
+ * @param {string} id Course identifier
+ * @returns {Object|undefined} Matching course object
+ */
+function getCourseById(id) {
+  return getCourses().find(course => course.id === id);
+}
+
+/**
  * Reads and returns the content of facilities.json
  * @returns {Array} Array of facility objects
  */
@@ -23,4 +32,4 @@ function getFacilities() {
   return JSON.parse(raw);
 }
 
-module.exports = { getCourses, getFacilities };
+module.exports = { getCourses, getCourseById, getFacilities };
