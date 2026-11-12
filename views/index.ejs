@@ -55,7 +55,7 @@
           <div class="card">
             <img src="<%= element.image %>" alt="<%= element.alt %>">
             <div class="card-inner">
-              <p><%= element.description %></p>
+              <p><%- element.description %></p>
               <h4><%= element.title %></h4>
             </div>
           </div>
@@ -104,6 +104,7 @@
 
   <section class="facilities">
     <div class="facilities-inner">
+      
       <% facilities.forEach(facility => { %>
         <div class="facilities-row <%= facility.reverse ? 'facilities-row--reverse' : '' %>">
           <div class="facilities-image">
@@ -157,8 +158,8 @@
     Para mandar variables solo a este fragmento, pasa un objeto como segundo argumento.
     Esas claves se leen dentro del parcial como variables locales y, si coinciden
     con una de la página, la del objeto tiene prioridad solo dentro del fragmento:
-    <%- include('partials/footer', { year: 2026, showCookies: true }) %>
-    En footer.ejs se usarían como <%= year %> o <% if (showCookies) { %>.
+    include('partials/footer', { year: 2026, showCookies: true })
+    En footer.ejs se usarían como < %= year % > o < % if (showCookies) {}.
   %>
   <%- include('partials/footer') %>
 

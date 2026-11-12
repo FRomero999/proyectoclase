@@ -8,6 +8,10 @@
 </head>
 <body>
 
+  <!--
+      TODO: Convertir la cabezera y el aside en partials
+  -->
+
   <aside class="off-canvas hidden">
     <nav class="off-canvas-menu">
       <button class="off-canvas-close">&times;</button>
@@ -40,29 +44,9 @@
   <section class="hero course-hero" style="background-image: url('<%= course.image %>');">
     <h1><%= course.title %></h1>
     <small><%= course.id.toUpperCase() %> · 2 academic years</small>
-    <p><%= course.description %></p>
+    <p><%- course.description %></p>
   </section>
 
-  <section class="facilities">
-    <div class="facilities-inner">
-      <div class="facilities-row">
-        <div class="facilities-image">
-          <img src="<%= course.image %>" alt="<%= course.alt %>">
-        </div>
-        <div class="facilities-text">
-          <h2>Course overview</h2>
-          <p><%= course.description %></p>
-          <ul>
-            <li>Duration: 2 academic years (2,000 hours)</li>
-            <li>Modality: On-campus</li>
-            <li>Language: English</li>
-            <li>Places: 30 per group</li>
-            <li>Internship: 400 hours in a company</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <%# El footer y el panel de cookies viven en views/partials/footer.ejs %>
   <%- include('partials/footer') %>
