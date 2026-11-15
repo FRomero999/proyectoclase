@@ -38,3 +38,32 @@ document.querySelector("button.cookies-read")?.addEventListener("click", (event)
     event.preventDefault()
     cookies_panel.classList.add("show-extended")
 })
+
+// Get the timetable section (only exists on the home page)
+const timetable = document.querySelector("#timetable")
+
+// Delegación de eventos: se registra UN solo listener en el ancestro (#timetable)
+// en lugar de uno por cada celda. Los clicks en cualquier td burbujean (bubbling)
+// desde el elemento pulsado hasta este ancestro común, donde se capturan.
+timetable?.addEventListener("click", (event) => {
+    // event.target es el elemento real pulsado (por ejemplo, el <abbr> de dentro).
+    // event.currentTarget es siempre #timetable, el elemento que escucha el evento.
+    // closest("td") sube por el DOM hasta la celda, aunque se pulse el texto.
+    const cell = event.target.closest("td")
+
+    // Ignorar clicks fuera de una celda de módulo (cabeceras, leyenda...)
+    // y las filas de recreo, que usan td con colspan.
+    if (!cell || cell.closest("tr").classList.contains("timetable-break")) return
+
+    // Comprobar antes de limpiar para permitir deseleccionar al repetir click.
+    const wasSelected = cell.classList.contains("timetable-cell--selected")
+
+    // Una sola celda resaltada a la vez.
+    timetable.querySelectorAll(".timetable-cell--selected").forEach(selectedCell => {
+        selectedCell.classList.remove("timetable-cell--selected")
+    })
+
+    if (!wasSelected) {
+        cell.classList.add("timetable-cell--selected")
+    }
+})

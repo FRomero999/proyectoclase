@@ -63,6 +63,20 @@ section.timetable{
         white-space:nowrap;
       }
 
+      tbody tr:not(.timetable-break) td{
+        cursor:pointer;
+        transition:background-color 0.2s;
+      }
+
+      tbody tr:not(.timetable-break) td:hover{
+        background-color:#f2f2f2;
+      }
+
+      tbody tr:not(.timetable-break) td.timetable-cell--selected{
+        background:var(--background-color-accent);
+        font-weight:700;
+      }
+
       tr.timetable-break{
         background:var(--background-color-accent);
         text-transform:uppercase;
