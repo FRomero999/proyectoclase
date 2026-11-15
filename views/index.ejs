@@ -105,6 +105,13 @@
       Weekly schedule for the second year of Web Application Development (2026/2027).
     </p>
     <div class="timetable-inner">
+      <%#
+        El atributo scope indica a qué celdas se refiere cada encabezado:
+        scope="col" lo asocia a toda su columna (los días) y scope="row" a toda su fila (las horas).
+        Conviene usarlo porque mejora la accesibilidad: los lectores de pantalla lo utilizan para
+        anunciar correctamente la relación entre cada celda y su encabezado, algo que no ocurre
+        si solo se usan th sin scope en tablas con encabezados en filas y columnas.
+      %>
       <table>
         <caption>Web Application Development · Year 2</caption>
         <thead>
