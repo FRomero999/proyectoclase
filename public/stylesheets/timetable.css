@@ -1,0 +1,111 @@
+/* CSS Timetable */
+
+section.timetable{
+  padding:4rem 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1rem;
+
+  h2{
+    margin:0;
+    font-size:2.5rem;
+    text-align:center;
+  }
+
+  p.timetable-intro{
+    margin:0;
+    font-size:1rem;
+    line-height:1.6;
+    text-align:center;
+    max-width:60rem;
+    padding:0 2rem;
+  }
+
+  div.timetable-inner{
+    width:100%;
+    max-width:1200px;
+    padding:0 2rem;
+    box-sizing:border-box;
+    margin-top:1rem;
+    overflow-x:auto;
+
+    table{
+      width:100%;
+      min-width:48rem;
+      border-collapse:collapse;
+      background:#ffffff;
+      box-shadow:0 0 2px 2px gray;
+
+      caption{
+        padding:0 0 1rem 0;
+        font-family:var(--title-font);
+        font-size:1.25rem;
+        font-weight:700;
+        text-align:left;
+      }
+
+      th,td{
+        padding:0.75rem 1rem;
+        font-size:0.95rem;
+        text-align:center;
+        border-bottom:1px solid #dddddd;
+      }
+
+      thead th{
+        background:var(--background-color-dark);
+        color:var(--text-color-light);
+        font-size:1rem;
+      }
+
+      tbody th{
+        background:#f2f2f2;
+        white-space:nowrap;
+      }
+
+      tr.timetable-break{
+        background:var(--background-color-accent);
+        text-transform:uppercase;
+        font-size:0.85rem;
+        letter-spacing:0.05rem;
+      }
+    }
+  }
+
+  ul.timetable-legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 2rem;
+    margin:1.5rem 0 0 0;
+    padding:0;
+    list-style:none;
+    font-size:0.9rem;
+
+    li{
+      margin:0;
+    }
+
+    strong{
+      font-weight:700;
+    }
+  }
+}
+
+@media (max-width:600px){
+  section.timetable{
+    h2{
+      font-size:2rem;
+    }
+
+    div.timetable-inner{
+      padding:0 1rem;
+
+      table{
+        th,td{
+          padding:0.5rem;
+          font-size:0.85rem;
+        }
+      }
+    }
+  }
+}
