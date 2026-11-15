@@ -8,34 +8,9 @@
 </head>
 <body>
 
-  <aside class="off-canvas hidden">
-    <nav class="off-canvas-menu">
-      <button class="off-canvas-close">&times;</button>
-      <ul>
-        <li><a href="/program/dam">DAM<br><small>Multiplatform Application Development</small></a></li>
-        <li><a href="/program/daw">DAW<br><small>Web Application Developmen</small></a></li>
-        <li><a href="/program/asir">ASIR<br><small>IT Systems Administration</small></a></li>
-        <li><a href="/program/asrm">ASRM<br><small>Microcomputer Systems and Network</small></a></li>
-      </ul>
-    </nav>
-    <footer>
-      © CESUR 2024 — Inspiring the next generation of IT professionals.
-    </footer>
-  </aside>
+  <%- include('partials/offcanvas') %>
 
-  <section class="header">
-    <nav class="header-navbar">
-      <a href="/"><img src="/images/logo.png"></a>
-      <ul>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#programs" id="open_offcanvas">Programs</a></li>
-        <li><a href="#admissions">Admissions</a></li>
-      </ul>
-      <ul>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </section>
+  <%- include('partials/header') %>
 
   <section class="hero">
     <video autoplay muted loop playsinline src="/images/background.mp4"></video>
